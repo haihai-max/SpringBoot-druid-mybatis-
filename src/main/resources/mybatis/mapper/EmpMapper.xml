@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haihai.selfwriting01.mapper.EmpMapper">
+   <!--//根据Id查一个emp
+    Emp selectEmpById(int eid);-->
+    <select id="selectEmpById" resultType="com.haihai.selfwriting01.bean.Emp">
+        select * from emp where eid=#{eid}
+    </select>
+
+    <!--//插入一个emp
+    int insertByEmp(Emp emp);-->
+    <insert id="insertByEmp">
+        insert into emp values (#{eid},#{ename})
+    </insert>
+
+    <!--//删除一个emp
+    int deleteById(int eid);-->
+    <delete id="deleteById">
+        delete from emp where eid=#{eid}
+    </delete>
+
+   <!-- //更新一个emp
+    int updateByEmp(Emp emp);&ndash;&gt;-->
+    <update id="updateByEmp">
+        update emp set ename=#{ename} where eid=#{eid}
+    </update>
+</mapper>
