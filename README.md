@@ -1,0 +1,3 @@
+# SpringBoot-druid-mybatis-
+这是一个SpringBoot使用druid数据源整合了mybatis实现对mysql数据库的增删查改。
+这是使用配置文件版本的mybatis
